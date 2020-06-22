@@ -32,7 +32,7 @@ nav, ul, li {
   --primary-text-color  : #212121; 
   --secondary-text-color: #757575; 
   --divider-color       :#BDBDBD;
-  --gutter: 20px;
+  --gutter: 10px;
 }
 
 .header {
@@ -92,8 +92,8 @@ nav, ul, li {
   margin: 2.5px;
 }
 .footer section{
-  margin-left: 8.5px;
-  margin-right: 8.5px;
+  margin-left: 37.5px;
+  margin-right: 17.5px;
 }
 
 .container {
@@ -101,7 +101,7 @@ nav, ul, li {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 60px 1fr;
-  grid-template-rows: 60px 1fr 30px;
+  grid-template-rows: 60px 1fr 40px;
 }
 
 .home,
@@ -146,14 +146,14 @@ nav, ul, li {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-rows: 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-rows: 25px 1fr 25px 1fr 25px 1fr;
 }
 
 .movie-list {
   padding: var(--gutter) 0;
   display: grid;
   grid-gap: var(--gutter) 0;
-  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  grid-template-columns: calc(var(--gutter)*2) 1fr var(--gutter);
 }
 
 .movie-list > * {
@@ -170,7 +170,7 @@ nav, ul, li {
   height: 100%;
   grid-gap: var(--gutter);
   grid-template-columns: repeat(12, minmax(250px,30%));
-  grid-template-rows: 100%;
+  grid-template-rows: minmax(150px,100%);
   overflow-x: scroll;
   scroll-snap-type: x proximity;
   align-content: center;
@@ -179,36 +179,51 @@ nav, ul, li {
 .movie-list .item-1 {
   background-image: url('../movie1.jpg');
   background-size: cover;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 50% 50%;
+  border-radius: 5px;
 }
 
 .movie-list .item-2 {
   background-image: url('../movie2.jpg');
   background-size: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 50% 50%;
 }
 
 .movie-list .item-3 {
   background-image: url('../movie3.jpg');
   background-size: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 50% 50%;
 }
 
-.item-1 article{
+li article{
  background-color: rgba(221, 54, 50, .5);
 /* height: 100vh; */
 color: white;
 padding-left: 10px;
 padding-top: 5px;
 padding-right: 5px;
+padding-bottom: 5px;
+border-radius: inherit;
 }
-article h5 {
-  font-size: 20px;
+li article h5 {
+  font-size: 1em;
   font-weight: normal;
 }
 
-.item-1 article p {
-  font-size: 12px;
+li article p {
+  font-size: .8em;
 }
