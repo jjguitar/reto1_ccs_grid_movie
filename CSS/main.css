@@ -94,7 +94,7 @@ nav, ul, li {
   margin: 5px;
 }
 .footer section{
-  margin-left: 55px;
+  margin-left: 15px;
   margin-right: 5px;
 }
 
@@ -148,14 +148,15 @@ nav, ul, li {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-rows: 25px 1fr 25px 1fr 25px 1fr;
+  grid-template-rows: 20px 1fr 20px 1fr 20px 1fr;
 }
 
 .movie-list {
-  padding: var(--gutter) 0;
+  padding: calc(var(--gutter)/3) 0;
   display: grid;
-  grid-gap: var(--gutter) 0;
+  grid-gap: calc(var(--gutter)/3) 0;
   grid-template-columns: calc(var(--gutter)*2) 1fr var(--gutter);
+  border-radius: 10px;
 }
 
 .movie-list > * {
@@ -176,39 +177,52 @@ nav, ul, li {
   overflow-x: scroll;
   scroll-snap-type: x proximity;
   align-content: center;
+  position: relative;
+  z-index: 5;
 }
 
 .movie-list .item-1 {
   background-image: url('../movie1.jpg');
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 90%;
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 50% 50%;
   border-radius: 5px;
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
 }
 
 .movie-list .item-2 {
   background-image: url('../movie2.jpg');
   background-size: cover;
   border-radius: 5px;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 90%;
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 50% 50%;
+  border-radius: 5px;
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
 }
 
 .movie-list .item-3 {
   background-image: url('../movie3.jpg');
   background-size: cover;
   border-radius: 5px;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 90%;
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 50% 50%;
+  border-radius: 5px;
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
 }
 
 li article{
@@ -237,6 +251,13 @@ li article p {
   color: var(--primary-text-color);
   font-size: .9em;
 }
+
+.item-1:hover,
+.item-2:hover,
+.item-3:hover{
+  box-shadow: 0px 0px 25px -9px rgba(211,47,47,1);
+}
+
 @media screen and (max-width:480px){
   .footer a{
     margin: .4em;
@@ -244,7 +265,7 @@ li article p {
   }
   .footer section{
     margin-left: 25px;
-    margin-right: 10px;
+    margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
