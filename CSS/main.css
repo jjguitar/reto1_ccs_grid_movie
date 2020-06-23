@@ -43,10 +43,12 @@ nav, ul, li {
   justify-content: space-between;
   align-items: center;
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 10px;
   box-shadow: 0 5px 6px -1px rgba(0, 0, 0, .2);
 }
-
+.header .home a {
+  font-weight: bold;
+}
 .menu {
   background-image: linear-gradient(to right, var(--dark-primary-color), var(--default-primary-color), #ff7785);
 
@@ -89,11 +91,11 @@ nav, ul, li {
   align-items: center;
 }
 .footer a{
-  margin: 2.5px;
+  margin: 5px;
 }
 .footer section{
-  margin-left: 37.5px;
-  margin-right: 17.5px;
+  margin-left: 55px;
+  margin-right: 5px;
 }
 
 .container {
@@ -226,4 +228,34 @@ li article h5 {
 
 li article p {
   font-size: .8em;
+}
+
+.movies h4 {
+  display: flex;
+  align-items: center;
+  padding-left: calc(var(--gutter)*2);
+  color: var(--primary-text-color);
+  font-size: .9em;
+}
+@media screen and (max-width:480px){
+  .footer a{
+    margin: .4em;
+    font-size: .6em;
+  }
+  .footer section{
+    margin-left: 25px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    grid-template-rows: 60px 1fr 20px;
+  }
+  .profile p {
+    display: none;
+  }
+  .header input {
+    margin: 0 10px;
+  }
 }
