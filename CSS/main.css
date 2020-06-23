@@ -270,6 +270,9 @@ li article p {
     justify-content: center;
     align-items: center;
   }
+  .footer {
+    justify-content: space-around;
+  }
   .container {
     grid-template-rows: 60px 1fr 20px;
   }
