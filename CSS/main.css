@@ -157,6 +157,11 @@ nav, ul, li {
   grid-gap: calc(var(--gutter)/3) 0;
   grid-template-columns: calc(var(--gutter)*2) 1fr var(--gutter);
   border-radius: 10px;
+  /* Bug fix apple scroll */
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: mandatory;
+  /* Bug fix apple scroll */
 }
 
 .movie-list > * {
@@ -241,7 +246,7 @@ li article h5 {
 }
 
 li article p {
-  font-size: .8em;
+  font-size: .7em;
 }
 
 .movies h4 {
