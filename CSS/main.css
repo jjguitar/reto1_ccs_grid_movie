@@ -187,7 +187,7 @@ nav, ul, li {
 }
 
 .movie-list .item-1 {
-  background-image: url('../movie1.jpg');
+  /* background-image: url('../movie1.jpg'); */
   background-size: cover;
   width: 95%;
   height: 90%;
@@ -201,7 +201,7 @@ nav, ul, li {
 }
 
 .movie-list .item-2 {
-  background-image: url('../movie2.jpg');
+  /* background-image: url('../movie2.jpg'); */
   background-size: cover;
   border-radius: 5px;
   width: 95%;
@@ -216,7 +216,7 @@ nav, ul, li {
 }
 
 .movie-list .item-3 {
-  background-image: url('../movie3.jpg');
+  /* background-image: url('../movie3.jpg'); */
   background-size: cover;
   border-radius: 5px;
   width: 95%;
