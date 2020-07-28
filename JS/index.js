@@ -27,6 +27,14 @@ async function getTopMoviesIds(n, url_top) {
   return ids;
 }
 
+function cutOverview(overview) {
+  if (overview.length > 160) {
+    overview = `${overview.substring(0,160)}...`
+  }
+
+  return overview
+}
+
 function renderMovies(movies, item) {
   const movieList = document.getElementById(`movies-${item}`);
   movieList.innerHTML = "";
@@ -40,7 +48,7 @@ function renderMovies(movies, item) {
             <article>
               <h5>${movie.title}</h5>
               <p>
-                ${movie.overview}
+                ${cutOverview(movie.overview)}
               </p>
             </article>`
     movieList.appendChild(listItem)
